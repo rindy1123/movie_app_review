@@ -1,0 +1,51 @@
+@import "bootstrap";
+
+/* ヘッダー*/
+body {
+  background-color: #F0FFFF!important;
+}
+
+.top {
+  background-color: #BBCCCC;
+  margin: 0;
+  padding: 10px;
+}
+
+.top h2 {
+  color:#ffffff!important;
+  font-size: 15px;
+}
+
+h1 {
+  display: inline;
+  font-size: 30px;
+  color:#ffffff!important;
+}
+
+.header_menu {
+  margin: 15px;
+}
+
+.menu {
+  background-color: #BBCCCC;
+  padding: 5px;
+}
+
+li {
+  text-align: center;
+  display: block;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  margin: 3px;
+  padding: 4px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+hr {
+  border-bottom: double;
+}
+
+.navbar{
+  min-width: 0%!important;
+}
+

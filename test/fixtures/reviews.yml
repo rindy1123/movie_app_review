@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie: one
+  name: MyString
+  content: MyText
+  score: 1.5
+
+two:
+  movie: two
+  name: MyString
+  content: MyText
+  score: 1.5

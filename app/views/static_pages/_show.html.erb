@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag "separate_css/movie_show", :media => "all" %>
+<h2 class='app_title'><%= yield(:app_title) %>のレビュー</h2>
+<% @movies.each do |movie| %>
+<div class='movie_list'>
+  <p class='movie_title'><%= link_to movie.title, movie_path(movie) %></p>
+  <p class='score'>平均評価:<%= movie.review_score %>/5.0</p>
+  <p class='movie_genre'><%= movie.genre %></p>
+  <p class='movie_description'>
+  <% if movie.description && movie.description.length >= 100 %>
+    <%= movie.description[0..100] + '...' %>
+  <% else %>
+    <%= movie.description %>
+  <% end %>
+  </p>
+</div>
+<% end %>

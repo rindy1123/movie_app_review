@@ -1,0 +1,39 @@
+/* エラーメッセージ */
+
+.error {
+  width: 35%;
+  margin: 0 auto;
+  color: #FF0000;
+}
+
+/* 会員登録・ログイン画面 */
+.form h2 {
+  text-align: center;
+}
+
+.form-block {
+  text-align: center;
+}
+
+.form-box{
+  margin: 20px;
+}
+
+.form-title {
+  display: block;
+}
+
+.input-box {
+  width: 35%;
+  height: 35px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.inline {
+  margin: 4px 0 30px 7px;
+}
+
+.go_to_signup {
+  margin: 40px 0 0 0;
+}

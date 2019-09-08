@@ -1,0 +1,33 @@
+<% provide(:title, 'Hulu') %>
+<% provide(:app_title, 'Hulu') %>
+<div class='search-form'>
+<%= form_with url: show_anime_hulu_path, scope: :search, method: :get, local: true do |f| %>
+<div class='search-box'>タイトル:<%= f.text_field :title %></div>
+<div class='select-box'>
+ジャンル:<%= f.select :genre,
+{'選択して下さい': nil,
+'SF': 'SF',
+'戦争': '戦争',
+'アドベンチャー': 'アドベンチャー',
+'史劇': '史劇',
+'音楽／ライブ': '音楽／ライブ',
+'キッズ': 'キッズ',
+'サスペンス／ミステリー': 'サスペンス／ミステリー',
+'青春': '青春',
+'アニメ': 'アニメ',
+'ファンタジー': 'ファンタジー',
+'恋愛': '恋愛',
+'ヒューマンドラマ': 'ヒューマンドラマ',
+'コメディ': 'コメディ',
+'スポーツ': 'スポーツ',
+'ファミリー': 'ファミリー',
+'アクション': 'アクション',
+'時代劇': '時代劇',
+}
+%>
+</div>
+<%= f.submit '検索', class: 'btn btn-primary', name: nil %>
+<% end %>
+</div>
+<%= render 'show' %>
+<%= will_paginate @movies, :outer_window   => 0, :inner_window   => 1, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

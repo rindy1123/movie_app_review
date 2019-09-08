@@ -1,0 +1,16 @@
+<% provide(:title, 'Amazon prime') %>
+<% provide(:app_title, 'Amazon prime') %>
+<div class='search-form'>
+<%= form_with url: show_anime_amazonprime_path, scope: :search, method: :get, local: true do |f| %>
+<div class='search-box'>タイトル:<%= f.text_field :title %></div>
+<div class='select-box'>
+ジャンル:<%= f.select :genre,
+{'選択して下さい': nil,
+'アニメ': 'アニメ',
+}%>
+</div>
+<%= f.submit '検索', class: 'btn btn-primary', name: nil %>
+<% end %>
+</div>
+<%= render 'show' %>
+<%= will_paginate @movies, :outer_window   => 0, :inner_window   => 1, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

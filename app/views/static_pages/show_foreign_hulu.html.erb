@@ -1,0 +1,38 @@
+<% provide(:title, 'Hulu') %>
+<% provide(:app_title, 'Hulu') %>
+<div class='search-form'>
+<%= form_with url: show_foreign_hulu_path, scope: :search, method: :get, local: true do |f| %>
+<div class='search-box'>タイトル:<%= f.text_field :title %></div>
+<div class='select-box'>
+ジャンル:<%= f.select :genre,
+{'選択して下さい': nil,
+'時代劇': '時代劇',
+'史劇': '史劇',
+'音楽／ライブ': '音楽／ライブ',
+'西部劇': '西部劇',
+'コメディ': 'コメディ',
+'スポーツ': 'スポーツ',
+'アクション': 'アクション',
+'ヒューマンドラマ': 'ヒューマンドラマ',
+'恋愛': '恋愛',
+'SF': 'SF',
+'アドベンチャー': 'アドベンチャー',
+'特撮': '特撮',
+'ファンタジー': 'ファンタジー',
+'戦争': '戦争',
+'パニック': 'パニック',
+'青春': '青春',
+'サスペンス／ミステリー': 'サスペンス／ミステリー',
+'キッズ': 'キッズ',
+'ドキュメンタリー': 'ドキュメンタリー',
+'ホラー': 'ホラー',
+'ファミリー': 'ファミリー',
+'アニメ': 'アニメ',
+}
+%>
+</div>
+<%= f.submit '検索', class: 'btn btn-primary', name: nil %>
+<% end %>
+</div>
+<%= render 'show' %>
+<%= will_paginate @movies, :outer_window   => 0, :inner_window   => 1, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

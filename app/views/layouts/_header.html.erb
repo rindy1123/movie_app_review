@@ -1,0 +1,46 @@
+<header>
+  
+    <div class='top'>
+    <h1>MovieAppReview</h1>
+    <h2>映画アプリの映画レビューサイト</h2>
+    </div>
+    
+    
+    <div class='menu'>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <%= link_to 'Home', root_path, class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+            <%= link_to 'Amazon prime', show_foreign_amazonprime_path, class: "nav-link active　dropdown-toggle", id: "navbarDropdownMenuLink", role: "button", data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"} %>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to '海外映画', show_foreign_amazonprime_path, class: 'dropdown-item' %>
+            <%= link_to '日本映画', show_japanese_amazonprime_path, class: 'dropdown-item' %>
+            <%= link_to 'アニメ', show_anime_amazonprime_path, class: 'dropdown-item' %>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <%= link_to 'Hulu', show_foreign_hulu_path, class: "nav-link active　dropdown-toggle", id: "navbarDropdownMenuLink", role: "button", data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"} %>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to '海外映画', show_foreign_hulu_path, class: 'dropdown-item' %>
+            <%= link_to '日本映画', show_japanese_hulu_path, class: 'dropdown-item' %>
+            <%= link_to 'アニメ', show_anime_hulu_path, class: 'dropdown-item' %>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <%= link_to 'Netflix', show_foreign_netflix_path, class: "nav-link active　dropdown-toggle", id: "navbarDropdownMenuLink", role: "button", data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"} %>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to '海外映画', show_foreign_netflix_path, class: 'dropdown-item' %>
+            <%= link_to '日本映画', show_japanese_netflix_path, class: 'dropdown-item' %>
+            <%= link_to 'アニメ', show_anime_netflix_path, class: 'dropdown-item' %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+<hr>

@@ -1,0 +1,83 @@
+.movie_list {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 10px 20px 20px;
+  border: 5px ridge;
+  width: 390px;
+  height: 350px;
+  display: inline-block;
+  word-break: break-all;
+  vertical-align: middle;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+}
+
+.app_title {
+  margin: 15px;
+  font-size: 25px;
+}
+
+.movie_title {
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.movie_genre {
+  background-color: #33CCCC;
+  border-radius: 5px;
+  width: 35%;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.movie_description {
+  word-break: break-all;
+  border-radius: 5px;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.pagination {
+  display: block;
+  text-align: center;
+  margin: 18px;
+}
+
+.pagination a {
+  margin: 4px;
+  border: 2px solid;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.current {
+  margin: 4px;
+  border: 2px solid;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.search-form {
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.search-box {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 5px 13px 5px;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.select-box {
+  display: block;
+  margin: 5px;
+}
+
+.pagination{
+  max-width: 100%;
+}
