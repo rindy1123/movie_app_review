@@ -7,6 +7,8 @@ class ReviewsController < ApplicationController
     if @review.update(review_params)
       flash[:success] = '投稿が完了しました'
       redirect_to movie_path(@movie)
+      @movie.review_score = @movie.reviews.average(:score).round(1)
+      @movie.save
     else
       flash[:danger] = '正しく入力してください'
       redirect_to movie_path(@movie)

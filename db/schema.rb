@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_134639) do
     t.string "genre"
     t.text "description"
     t.string "app"
-    t.float "review_score"
+    t.float "review_score", default: 0.0
     t.string "movie_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

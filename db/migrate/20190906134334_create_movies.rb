@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.string :genre
       t.text :description
       t.string :app
-      t.float :review_score
+      t.float :review_score, default: 0
       t.string :movie_type
 
       t.timestamps
