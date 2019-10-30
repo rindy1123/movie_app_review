@@ -13,7 +13,7 @@ gem 'bcrypt', '~> 3.1.13'
 # Use carrierwave for uploading images
 gem 'carrierwave'
 # Use bootstrap
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
