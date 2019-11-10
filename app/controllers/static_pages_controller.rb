@@ -39,16 +39,16 @@ class StaticPagesController < ApplicationController
 # 映画の一覧表示
   def show_movie(app, movie_type)
     if params[:search].nil? # 検索していない場合
-      @movies = Movie.where(app: app, movie_type: movie_type).paginate(page: params[:page], per_page: 9).order(review_score: :desc)
+      @movies = Movie.where(app: app, movie_type: movie_type).order(review_score: :desc)
     elsif params[:search][:title] && params[:search][:genre] == '' # タイトルのみ検索している場合
       @movies = Movie.where(app: app, movie_type: movie_type).where("title LIKE ?", "%#{params[:search][:title]}%")
-      .paginate(page: params[:page], per_page: 9).order(review_score: :desc)
+      .order(review_score: :desc)
     elsif params[:search][:genre] && params[:search][:title] == '' # ジャンルで検索している場合
       @movies = Movie.where(app: app, movie_type: movie_type).where("genre LIKE ?", "%#{params[:search][:genre]}%")
-      .paginate(page: params[:page], per_page: 9).order(review_score: :desc)
+      .order(review_score: :desc)
     else # ジャンルとタイトル両方で検索している場合
       @movies = Movie.where(app: app, movie_type: movie_type).where("genre LIKE ?", "%#{params[:search][:genre]}%")
-      .where("title LIKE ?", "%#{params[:search][:title]}%").paginate(page: params[:page], per_page: 9).order(review_score: :desc)
+      .where("title LIKE ?", "%#{params[:search][:title]}%").order(review_score: :desc)
     end
   end
   
