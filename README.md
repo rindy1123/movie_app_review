@@ -12,13 +12,9 @@ Amazon primeビデオ、Netflix, Huluで配信されているの映画のレビ�
 ## 開発環境
 ruby 2.5.1
 ruby on rails 5.2.1
-AWS Cloud9 
 HTML5  
 CSS  
 bootstrap 4.1.1
-
-## デプロイ先
-https://movie--app--review.herokuapp.com/
 
 ## git clone
 ```
